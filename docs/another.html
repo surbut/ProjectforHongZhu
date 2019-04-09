@@ -419,7 +419,7 @@ div.section {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -428,7 +428,7 @@ div.section {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#report"> Report <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#report"> Report <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -440,7 +440,7 @@ div.section {
 <strong>Last updated:</strong> 2019-04-09
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 5 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>ProjectforHongZhu/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -456,12 +456,12 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown is untracked by Git. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
 </div>
 </div>
 </div>
@@ -516,10 +516,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsurbutProjectforHongZhutree24c423294f03b08e7c356edc5b143d3063d0aedftargetblank24c4232a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/surbut/ProjectforHongZhu/tree/24c423294f03b08e7c356edc5b143d3063d0aedf" target="_blank">24c4232</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsurbutProjectforHongZhutree4a4320fa722f280b96d85d80c70081a1f5c210c5targetblank4a4320fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/surbut/ProjectforHongZhu/tree/4a4320fa722f280b96d85d80c70081a1f5c210c5" target="_blank">4a4320f</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomsurbutProjectforHongZhutree24c423294f03b08e7c356edc5b143d3063d0aedftargetblank24c4232a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomsurbutProjectforHongZhutree4a4320fa722f280b96d85d80c70081a1f5c210c5targetblank4a4320fa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -532,10 +532,6 @@ Ignored files:
     Ignored:    analysis/.DS_Store
     Ignored:    docs/.DS_Store
 
-Untracked files:
-    Untracked:  analysis/another.Rmd
-    Untracked:  docs/figure/another.Rmd/
-
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -547,9 +543,69 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
+
 <p>
-There are no past versions. Publish this analysis with <code>wflow_publish()</code> to start tracking its development.
+These are the previous versions of the R Markdown and HTML files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view them.
 </p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/surbut/ProjectforHongZhu/blob/4a4320fa722f280b96d85d80c70081a1f5c210c5/analysis/another.Rmd" target="_blank">4a4320f</a>
+</td>
+<td>
+Sarah Urbut
+</td>
+<td>
+2019-04-09
+</td>
+<td>
+Update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/surbut/ProjectforHongZhu/4a4320fa722f280b96d85d80c70081a1f5c210c5/docs/another.html" target="_blank">4a4320f</a>
+</td>
+<td>
+Sarah Urbut
+</td>
+<td>
+2019-04-09
+</td>
+<td>
+Update
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
 </div>
 </div>
@@ -568,6 +624,43 @@ hv &lt;- heatmap(x, col = cm.colors(256), scale = &quot;column&quot;,
               xlab = &quot;specification variables&quot;, ylab =  &quot;Car Models&quot;,
               main = &quot;heatmap(&lt;Mtcars data&gt;, ..., scale = \&quot;column\&quot;)&quot;)</code></pre>
 <p><img src="figure/another.Rmd/cars-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-cars-1">
+Past versions of cars-1.png
+</button>
+</p>
+<div id="fig-cars-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/surbut/ProjectforHongZhu/blob/4a4320fa722f280b96d85d80c70081a1f5c210c5/docs/figure/another.Rmd/cars-1.png" target="_blank">4a4320f</a>
+</td>
+<td>
+Sarah Urbut
+</td>
+<td>
+2019-04-09
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>utils::str(hv) # the two re-ordering index vectors</code></pre>
 <pre><code>List of 4
  $ rowInd: int [1:32] 31 17 16 15 5 25 29 24 7 6 ...
@@ -580,10 +673,84 @@ heatmap(x, Colv = NA, col = cm.colors(256), scale = &quot;column&quot;,
         xlab = &quot;specification variables&quot;, ylab =  &quot;Car Models&quot;,
         main = &quot;heatmap(&lt;Mtcars data&gt;, ..., scale = \&quot;column\&quot;)&quot;)</code></pre>
 <p><img src="figure/another.Rmd/cars-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-cars-2">
+Past versions of cars-2.png
+</button>
+</p>
+<div id="fig-cars-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/surbut/ProjectforHongZhu/blob/4a4320fa722f280b96d85d80c70081a1f5c210c5/docs/figure/another.Rmd/cars-2.png" target="_blank">4a4320f</a>
+</td>
+<td>
+Sarah Urbut
+</td>
+<td>
+2019-04-09
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>## &quot;no nothing&quot;
 heatmap(x, Rowv = NA, Colv = NA, scale = &quot;column&quot;,
         main = &quot;heatmap(*, NA, NA) ~= image(t(x))&quot;)</code></pre>
 <p><img src="figure/another.Rmd/cars-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-cars-3">
+Past versions of cars-3.png
+</button>
+</p>
+<div id="fig-cars-3" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/surbut/ProjectforHongZhu/blob/4a4320fa722f280b96d85d80c70081a1f5c210c5/docs/figure/another.Rmd/cars-3.png" target="_blank">4a4320f</a>
+</td>
+<td>
+Sarah Urbut
+</td>
+<td>
+2019-04-09
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>round(Ca &lt;- cor(attitude), 2)</code></pre>
 <pre><code>           rating complaints privileges learning raises critical advance
 rating       1.00       0.83       0.43     0.62   0.59     0.16    0.16
@@ -609,6 +776,43 @@ attr(,&quot;legend&quot;)
 <h2>Including Plots</h2>
 <p>You can also embed plots, for example:</p>
 <p><img src="figure/another.Rmd/pressure-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pressure-1">
+Past versions of pressure-1.png
+</button>
+</p>
+<div id="fig-pressure-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/surbut/ProjectforHongZhu/blob/4a4320fa722f280b96d85d80c70081a1f5c210c5/docs/figure/another.Rmd/pressure-1.png" target="_blank">4a4320f</a>
+</td>
+<td>
+Sarah Urbut
+</td>
+<td>
+2019-04-09
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot. <br> <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -634,9 +838,9 @@ attached base packages:
 loaded via a namespace (and not attached):
  [1] workflowr_1.2.0 Rcpp_1.0.0      digest_0.6.18   rprojroot_1.3-2
  [5] backports_1.1.3 git2r_0.24.0    magrittr_1.5    evaluate_0.12  
- [9] stringi_1.2.4   fs_1.2.6        rmarkdown_1.11  tools_3.5.2    
-[13] stringr_1.3.1   glue_1.3.0      xfun_0.4        yaml_2.2.0     
-[17] compiler_3.5.2  htmltools_0.3.6 knitr_1.21     </code></pre>
+ [9] stringi_1.2.4   fs_1.2.6        whisker_0.3-2   rmarkdown_1.11 
+[13] tools_3.5.2     stringr_1.3.1   glue_1.3.0      xfun_0.4       
+[17] yaml_2.2.0      compiler_3.5.2  htmltools_0.3.6 knitr_1.21     </code></pre>
 </div>
 </div>
 
