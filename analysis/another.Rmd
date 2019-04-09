@@ -1,0 +1,51 @@
+---
+title: "another"
+output: html_document
+---
+
+And yet another file
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+require(graphics); require(grDevices)
+x  <- as.matrix(mtcars)
+rc <- rainbow(nrow(x), start = 0, end = .3)
+cc <- rainbow(ncol(x), start = 0, end = .3)
+hv <- heatmap(x, col = cm.colors(256), scale = "column",
+              RowSideColors = rc, ColSideColors = cc, margins = c(5,10),
+              xlab = "specification variables", ylab =  "Car Models",
+              main = "heatmap(<Mtcars data>, ..., scale = \"column\")")
+utils::str(hv) # the two re-ordering index vectors
+
+## no column dendrogram (nor reordering) at all:
+heatmap(x, Colv = NA, col = cm.colors(256), scale = "column",
+        RowSideColors = rc, margins = c(5,10),
+        xlab = "specification variables", ylab =  "Car Models",
+        main = "heatmap(<Mtcars data>, ..., scale = \"column\")")
+
+## "no nothing"
+heatmap(x, Rowv = NA, Colv = NA, scale = "column",
+        main = "heatmap(*, NA, NA) ~= image(t(x))")
+
+
+round(Ca <- cor(attitude), 2)
+symnum(Ca) # simple graphic
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
